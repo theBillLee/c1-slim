@@ -1,0 +1,4 @@
+# Reference frames are raw 5624-byte bitmaps, not text: never let git apply
+# line-ending conversion or diff them as text (some contain no NUL byte, so git
+# would otherwise treat them as text and could mangle them on checkout).
+tests/frames/*.bin -text
